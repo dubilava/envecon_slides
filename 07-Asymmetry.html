@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Environmental Economics</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="David Ubilava" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Environmental Economics
+## Lecture 7: Regulation with Information Asymmetry
+### David Ubilava
+### October 2020
+
+---
+
+
+
+
+
+
+
+
+
+# Imperfect Competition
+
+When markets are not competitive, a host of efficiency problems arise, which, in turn, amplify the issues of environmental regulation. 
+
+We will illustrated this for two different scenarios: 
+
+- a *monopolist in the goods market* that is one of many polluters; and 
+- a competitive firm in the goods market that is the *only polluter*.
+
+---
+
+# Imperfect Competition
+
+## Monopolist in Production
+
+Consider a steel manufacturer that also emits pollution. Suppose there are other polluters in the region, but only one steel manufacturer (so, the steel manufacturer is a monopolist within its industry). 
+
+In absence of regulation, the monopolist will produce where its marginal revenue and the unregulated marginal costs are equal.
+
+The regulation will shift the marginal cost curve upward, and the firm will produce where the marginal revenue and the regulated marginal costs are equal. The emission fee has made matters worse (from the standpoint of efficiency).
+
+---
+
+# Imperfect Competition
+
+## Monopolist in Production
+
+The intuition behind this is simple: a monopolist has already lowered output below the competitive levels (which happen to be larger than the socially optimal levels). The imposition of the emission fee further restricts output, and in so doing may just overdo it.
+
+---
+
+# Imperfect Competition
+
+## Monopolist in Emission
+
+Consider a firm, which is competitive in the goods market, but is a sole emitter of pollution in the region. That is, the firm is a monopolist in emission. 
+
+The regulator imposes the emission tax, by setting it equal to the marginal damage of pollution. The firm, being able to observe the slope of the marginal damage function, will end up producing at the level that is below the efficient amount of pollution.
+
+---
+
+
+# Heterogeneity of Polluters
+
+Thus far we have assumed that a regulator knows exactly what pollution control costs are. 
+
+A more realistic scenario, however, is that the regulator only possesses a limited fraction of the polluter's private information on control costs. In such case, a polluter may benefit from strategically misstating the costs. 
+
+Questions to address, then, are: 
+
+- whether the information asymmetry related to control costs favors the use of permits vs. fees as a more adequate means of emission regulation, and 
+- whether there are benefits to an *ex-ante* communication (information sharing) between a polluter and a regulator.
+
+---
+
+
+# Heterogeneity of Polluters
+
+Suppose there are two types of polluters: those with high marginal savings from emission, `\(MS_H(e)\)`, and those with low marginal savings from emission, `\(MS_L(e)\)`. 
+
+A uniform emission fee, `\(\tau\)`, thus will be either too low or too high, depending on the polluter type. Either way, there will be efficiency losses.
+
+---
+
+
+# Heterogeneity of Polluters
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="07-Asymmetry_files/figure-html/uncertainty-1.png" alt="Efficiency Losses" width="90%" /&gt;
+&lt;p class="caption"&gt;Efficiency Losses&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+
+# Heterogeneity of Polluters
+
+If a regulator knew exactly the type of a polluter, it would impose `\(\tau_H^*\)` on high-cost polluters, and `\(\tau_L^*\)` on low-cost polluters, and there would have been no efficiency losses. The issue exists, however, because polluters have incentives to misstate their actual type: 
+
+- if a regulator were to impose emission fees, a rational polluter would claim they are low-cost, regardless of their actual type; 
+- if a regulator were to introduce permits, a rational polluter would claim they are high-cost, regardless of their actual type.
+
+---
+
+
+# Heterogeneity of Polluters
+
+One way to 'correct' the aforementioned adverse selection issue is by introducing a reward system of some sort for telling the truth. 
+
+Consider the case of quantity regulations. Suppose a regulator is willing to introduce a reward, `\(R\)`, to motivate truth-telling. So, polluters who claim they are high-cost get paid `\(R_H\)`, and polluters who claim they are low-cost get paid `\(R_L\)`. In fact, a regulator can set `\(R_H=0\)` (recall: polluters have an in incentive to claim they are high-cost).
+
+---
+
+
+# Heterogeneity of Polluters
+
+Each type of firm will tell the truth as long as that is the optimal strategy after the award has been factored in. For a high-cost firm, this means: `$$C_H(e_H) &lt; C_H(e_L)-R_L,$$` and for a low-cost firm, this means: `$$C_L(e_L)-R_L &lt; C_L(e_H).$$` Putting the two together, we obtain: `$$C_L(e_L) - C_L(e_H) &lt; R_L &lt; C_H(e_L) - C_H(e_H)$$`
+
+---
+
+
+# Heterogeneity of Polluters
+
+Rewards aside, the benefit of lying for a low-cost firm is given by the area under their marginal savings curve, `\(MS_L(e)\)`, and between the low and high levels of emission (respectively denoted by `\(e_L\)` and `\(e_H\)`); the benefit of telling the truth for a high-cost firm is given by the area under their marginal savings curve, `\(MS_H(e)\)`, and between the low and high levels of emission.
+
+---
+
+
+# Permits or Fees
+
+In absence of information asymmetry a regulator can reach the same outcome in terms of emission levels, either by imposing emission fees or by issuing emission permits. 
+
+Uncertainty over emission costs, however, may distort such equivalence.
+
+---
+
+
+# Permits or Fees
+
+Consider a regulator and a firm. The regulator is aware that the firm can be of the high-cost or the low-cost marginal savings type. But unknown to the regulator remains the exact type of the firm. The regulator can implement either of the two options of emission control: a fee or a permit. 
+
+But which one of these two is preferred? 'It depends' is the answer, which leads us to *Weitzman's Theorem*: 
+
+&gt; With uncertainty over emission control costs, emission permits are preferred when marginal damages are more steeply sloped than marginal savings associated with emissions; otherwise, emission fees are preferred.
+
+---
+
+
+# Permits and Fees
+
+The issue with emission fees or permits is that neither of the two types of regulations has a flexibility to enforce pollution control, when it is relatively cheap to do so, but be a little more lenient, otherwise. 
+
+It is, however, possible to introduce a hybrid regulation, where the permit system is coupled with the fee/subsidy mechanism.
+
+---
+
+
+# Permits and Fees
+
+The regulatory scheme is such that the firm is told to emit `\(e^*\)`. If it emits less, it will receive subsidy, `\(\sigma\)`, for each unit of pollution under the limit, and if it emits more, it will pay fee, `\(\tau\)`, for each unit of pollution over the limit.
+
+With such mechanism in place, if the firm's actual marginal savings are low, they will choose to emit `\(\hat{e}_L\)` and collect subsidy. If, on the other hand, the firm's marginal savings are high, they will emit `\(\hat{e}_H\)`, which is above the allowed limit, and just pay the penalty for the difference.
+
+---
+
+
+# Permits and Fees
+
+The hybrid regulation allows us to achieve complete efficiency when there are only two marginal savings schedules.
+
+When there are more than two types of firms - which is a more likely scenario - the hybrid regulation will not facilitate complete efficiency, but it will still do better than a pure emission fee or a pure emission permit scheme.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
