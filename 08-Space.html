@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Environmental Economics</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="David Ubilava" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Environmental Economics
+## Lecture 8: Regulation Across Space
+### David Ubilava
+### October 2020
+
+---
+
+
+
+
+
+
+
+
+
+# Emission and Ambient Concentration
+
+One of the crucial dimensions of pollution control is that the degree of exposure to pollution often highly depends on location of those exposed. 
+
+Consider a case with several sources of emission, `\(e_i\)`, where `\(i=1,\ldots,n\)`. Each of these sources impact the air quality at some site, `\(v_s\)`. We can express this relationship as follows: `$$v_s = \sum_{i=1}^{n}a_{is}e_i,$$` where `\(a_{is}\)` is the *transfer coefficient* that links the emission from a source `\(i\)` with the ambient concentration at a receptor's site `\(s\)`. 
+
+---
+
+
+# Emission and Ambient Concentration
+
+The efficient amount of pollution involves equating marginal damages with marginal savings of emission. But, the marginal damage should be measured in terms of ambient concentration at the receptor's site. The relationship between the marginal damage *in terms of emission* from source `\(i\)`, and the marginal damage *in terms of ambient concentration* at a receptor's site, can be given by: `$$MD(e_i) = a_{i}MD(v),\;~~i=1,\ldots,n.$$` Note: to keep things simple we assume a single receptor, and drop subscript `\(s\)` in this and subsequent equations.
+
+---
+
+
+# Emission and Ambient Concentration
+
+Recognize that for any source, `\(i\)`, `\(MS(e_i) = MD(e_i)\)`; substitute it into the above equation and divide through by `\(a_{i}\)` to obtain: `$$MS(e_i)/a_{i} = MD(v),\;~~i=1,\ldots,n.$$` As it follows, two conditions are necessary for efficiency: 
+
+- normalized marginal savings must be equalized for all sources; and 
+- normalized marginal savings must be equal to the marginal damage.
+
+---
+
+
+# Ambient-Differentiated Emission Fees
+
+When emission fees are imposed, the firms will respond by minimizing their total costs associated with emission, resulting in: `$$MS(e_i) = t_i,\;~\forall\;i.$$` It then follow that: `$$t_i = a_i MD(v)$$` and, to hold the equimarginal principle, `$$t_i/a_i = t_j/a_j,\;~~\forall\;i,j.$$` That is, the ambient-differentiated emission fees levied on the firms must be equal.
+
+---
+
+
+# Ambient-Differentiated Emission Fees
+
+While the ambient-differentiated emission fees can achieve efficiency, sometimes it is too complicated to vary the emission fee across locations, perhaps due to uncertainty about the transfer coefficients, or perceived unfairness to differentiate fees across firms.
+
+Consider a two-firm scenario, and suppose they have the same marginal savings, but the transfer coefficients vary, resulting in different marginal damage curves. 
+
+---
+
+
+# Ambient-Differentiated Emission Fees
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="08-Space_files/figure-html/inefficiency-1.png" alt="Inefficiency of the Uniform Tax" width="90%" /&gt;
+&lt;p class="caption"&gt;Inefficiency of the Uniform Tax&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+
+# Ambient-Differentiated Emission Fees
+
+If a regulator were to differentiate, it would set fees at `\(t_1\)` and `\(t_2\)`, respectively yielding emissions of `\(e_1\)` and `\(e_2\)`, and incurring no losses in efficiency.
+
+But if a regulator were to use a uniform tax, `\(t_0\)`, both firms would emit the same amount of pollution, `\(e_0\)`, which will result in efficiency losses given by: 
+
+- the area between `\(e_0\)` and `\(e_1\)`, below `\(MS(e)\)` and above `\(MD(e_1)\)`; and 
+- the area between `\(e_0\)` and `\(e_2\)`, above `\(MS(e)\)` and below `\(MD(e_2)\)`. 
+
+If such uniform fee were to be the regulator's only option, the 'optimal' tax would be the one that minimizes the said efficiency losses.
+
+---
+
+
+# Marketable Ambient Permits
+
+An emission permit system that take into account the effect of ambient concentration in the affected locations is somewhat more complicated, but (in theory) can work just as well as ambient-differentiated emission fees. 
+
+Consider a case of two firms and one receptor. If a regulator (randomly) assigns a total of `\(L=L_1+L_2\)` permits to these firms, the questions to be answered will be: 
+
+- what will the price of permits be? and 
+- how much will each firm emit?
+
+---
+
+
+# Marketable Ambient Permits
+
+Let `\(r\)` denote the price of permits, and `\(l_1\)` and `\(l_2\)` denote the number of permits eventually held by the firms. Note that: `\(l_1=a_1 e_1\)` and `\(l_2=a_2 e_2\)`, resulting in `\(a_1 e_1 + a_2 e_2 =L\)`. Each firm's total costs associated with mitigating the emission are: `$$TC(e_i) = C(e_i)+(a_i e_i - L_i)r,\;~~i=1,2.$$` Cost minimization (with respect to `\(e_i\)`) results in the optimality conditions: `$$MS(e_i)/a_i = r,\;~~i=1,2.$$` We thus can solve the three equations to obtain the optimal values of `\(e_1\)`, `\(e_2\)`, and `\(r\)`.
+
+---
+
+
+# Zonal Instruments
+
+The so-called zonal instruments offer a middle ground between completely undifferentiated emission fees or permits (i.e., where the space dimension is ignored) and ambient fees or permits.
+
+In the case of fees, a region is divided into zones. Within each zone, the same emission fee applies; but the fees may vary across the zones. 
+
+The advantage of such zonal system is more flexibility, resulting in efficiency gains (over the undifferentiated system). The disadvantages are those inherited from the ambient fee system. Note that as the number of zones increases (i.e., as zones become more granular), a zonal fee system, in essence, becomes an ambient fee system.
+
+---
+
+
+# Zonal Instruments
+
+As for permits, within a zone, they are traded on a 1-for-1 basis. Across the zones, however, a permit trading system applies different transfer coefficients for different zones. 
+
+There are efficiency gains from a zonal system, accompanied by disadvantages due to complexity of the ambient permit system.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
