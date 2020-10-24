@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Environmental Economics</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="David Ubilava" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Environmental Economics
+## Lecture 9: Regulation Over Time
+### David Ubilava
+### October 2020
+
+---
+
+
+
+
+
+
+
+
+
+# Stock Pollutants
+
+Pollution can (and usually does) accumulate over time, and may also vary within a given period of time (e.g., time of the day, month of the year, etc.). 
+
+Therefore, the damage from emissions today spans into the future periods, when (a portion of) today's emissions are still present in the environment. The pollutants usually get cleansed by the environment, eventually; but the "eventually" may be a rather long time horizon.
+
+---
+
+
+# Stock Pollutants
+
+Pollutants that have a tendency to accumulate over time are known as *stock pollutants*. Consider the following process of accumulation: `$$s_t=\beta s_{t-1}+e_t,$$` where `\(s_t\)` is the stock of a pollutant in period `\(t\)`, and `\(e_t\)` is the emission of the pollutant in a given period; and `\(\beta\)` denotes the persistence rate of the pollutant, and is bounded between zero and one. 
+
+---
+
+
+# Stock Pollutants
+
+If we iterate backward the pollutant accumulation process, we obtain: 
+`$$s_t = \sum_{j=1}^{t} \beta^{t-j}e_j + \beta^t s_0.$$`
+Note that if `\(\beta=0\)`, the stock completely disappears from one period to the next. Such a pollutant is known as the *pure flow pollutant*. Alternatively, if `\(\beta=1\)`, the pollutant is persistent, in the sense that once in the environment, it does not degrade (disappear) over time.
+
+---
+
+
+# Efficiency with Stock Pollutants
+
+Obtaining efficiency with a stock pollutant is somewhat complicated, as this requires accounting for the marginal damages of pollution that occurs over a period of time. Conceptually, of course, this is still the same as before. 
+
+At any given time period the net costs of emission, `\(NC(e_t)\)`, are given by: 
+`$$NC(e_t) = \sum_{t=1}^{\infty}\delta^{t-1}\left[C_t(e_t)+D_t(s_t)\right],$$` 
+where `\(\delta\)` is the discount factor (to be discussed below, but for now simply assume that `\(0&lt;\delta&lt;1\)`).
+
+---
+
+
+# Efficiency with Stock Pollutants
+
+We calculate the optimal pollution emission at any point in time, say in period 1, in a 'usual' way: 
+`$$\frac{\partial NC(e_t)}{\partial e_1} = \sum_{t=1}^{\infty}\delta^{t-1}\left[\frac{\partial C_t(e_t)}{\partial e_1}+\frac{\partial D_t(s_t)}{\partial s_t}\frac{\partial s_t}{\partial e_1}\right] = 0.$$`
+Observe that:
+`$$\begin{aligned}
+\frac{\partial C_t(e_t)}{\partial e_1} &amp;= \left\{
+    \begin{array}{ll}
+      MC_t(e_1) \equiv -MS_t(e_1)\;~~\text{when}~~t = 1 \\
+      0\;~~\text{otherwise};
+    \end{array}
+  \right.\\
+  \frac{\partial D_t(s_t)}{\partial s_t} &amp;= MD_t(s_t); \text{and}\\
+  \frac{\partial s_t}{\partial e_1} &amp;= \beta^{t-1}.
+\end{aligned}$$`
+
+---
+
+
+# Efficiency with Stock Pollutants
+
+Putting everything together, the foregoing yields the following: `$$MS_1(e_1) = \sum_{t=1}^{\infty}\delta^{t-1}\beta^{t-1}MD_t(s_t)$$`
+              
+That is, for efficiency, we should set the marginal savings from emitting a unit of pollution today equal to the sum of marginal damages that may occur in the future, which are adjusted by the discount factor and the persistence rate of the pollutant.
+
+---
+
+
+# Discounting
+
+Discounting pertains to people's preferences over time. 
+
+Generally, people prefer benefits now rather than later; also, people prefer to delay incurring costs. 
+
+Conceivably, there is some offer at which you would be indifferent between the current payment (of, say, $100) and the future payment (of, say, $110 or some other value that is greater than $100). 
+
+---
+
+
+# Discounting
+
+The present value of a future amount of net benefits is the amount which, if a person received it today, would make them just as well off as if they waited to receive those net benefits in the future. 
+
+This indifference between two net benefits separated by time determines a person's discount factor. 
+
+Discount factor is a number indicating how much a person discounts (net) benefits that accrue in the future relative to the present.
+
+---
+
+
+# Discounting
+
+For example, if someone is indifferent between receiving $100 today and $110 one year from now, we would say the equivalent to this person of $110 one year from now is $100 today.
+
+So, when calculating the person's discount factor, we ask ourselves by what 'factor' we must multiply the future period's net benefit, in order to make it equal the current time period's net benefit. 
+
+---
+
+
+# Discounting
+
+Mathematically, $$\$100=\delta\times\$110 \Rightarrow \delta \approx 0.91$$ where `\(\delta\)` denotes the discount factor. 
+
+A person with a lower discount factor signals that they value current net benefits (relative to receiving these same net benefits later) more than a person with a higher discount factor. The discount rate, `\(r\)`, is related to the discount factor, `\(\delta\)`, by the following relationship: `$$\delta = \frac{1}{1+r}$$`
+
+---
+
+
+# Benefit-Cost Analysis
+
+One of the primary tools for deciding the appropriateness of a government intervention in the economy is benefit-cost analysis. 
+
+The basic idea of this tool is simple: find the project that gives the largest total surplus (equivalent to total benefits less total costs). 
+
+Its implementation is less trivial, however. The usual problem is difficulty in quantifying some of the benefits or costs.
+Benefit-cost analysis has its supporters (who believe that it helps with the decision-making process) and skeptics (who don't believe that environmental issues can be summarized in dollar amount).
+
+---
+
+
+# Benefit-Cost Analysis
+
+Benefit-cost analysis has two uses: 
+
+- to judge the desirability of a proposed action before it is enacted; and 
+- to assess the performance of a past action after it has been enacted.
+
+Costs and benefits often occur at various points in time. For example, we may implement a program (and spend money) to reduce carbon dioxide emissions today, but see the benefits of this program only decades (or perhaps even centuries) into the future.
+To evaluate such an inter-temporal mixture of costs and benefits we turn to discounting (again).
+
+---
+
+
+# Benefit-Cost Analysis
+
+Consider a stream of costs `\(\{C_0,C_1,\ldots,C_T\}\)` and benefits `\(\{B_0,B_1,\ldots,B_T\}\)` during the period of time indexed by `\(t=0,1,\ldots,T\)`, where `\(t=0\)` denotes the current period.
+A net present value (NPV) of these streams is given by: 
+`$$\text{NPV} = \sum_{t=0}^{T}\delta^t\left(B_t-C_t\right),$$` 
+where `\(\delta^t\)` is the discount factor associated with period `\(t\)`. 
+
+---
+
+
+# Benefit-Cost Analysis
+
+Several factors will thus impact the decision making: actual values of the benefits and costs; the timing of the benefits and costs occurrence; the length of the project; the assumed discount rate. 
+
+In practice, a decision-maker (or a researcher) has several options to decide on the value of the discount rate: 
+
+- set it equal to the interest rate; 
+- use the rate at which the government borrows money; 
+- use the social opportunity cost of capital; 
+- get an insight from experiments.
+
+Choosing the discount rate is thus largely a judgment call, and it is quite possible that the choice of discount rate can make a big difference.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
